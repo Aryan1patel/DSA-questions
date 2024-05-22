@@ -84,8 +84,8 @@ public class mediansortedarray {
 
     public static void main(String[] args) {
         
-        int [] arr1={2,4,6};
-        int [] arr2={1,3,5};
+        int [] arr1={1,3};
+        int [] arr2={2};
 
 
         int s1=0;
@@ -93,13 +93,15 @@ public class mediansortedarray {
 
         int count=0;
 
-        int mid1=((arr2.length+arr1.length)/2);        // 3
-        int mid2=mid1-1;     // main mid               // 2
+        int mid1=((arr2.length+arr1.length)/2);        // 3     //1
+        int mid2=mid1-1;     // main mid               // 2     //0
         
         int val1=0;
         int val2=0;
 
         int current=0;
+
+        
 
         
         
@@ -117,10 +119,16 @@ public class mediansortedarray {
                 if(count==mid1){
                   val1=arr1[s1];
 
-                  val2=current;
+                }
+                if(count==mid2){
+                    val2=arr1[s1];
                 }
 
+                
+
                 current=arr1[s1];
+
+                System.out.print(current);
 
                 s1++;
                 
@@ -134,10 +142,16 @@ public class mediansortedarray {
                 if(count==mid1){
                     val1=arr2[s2];
   
-                    val2=current;
+                    
                   }
 
+                  if(count==mid2){
+                    val2=arr2[s2];
+                }
+
                   current=arr2[s2];
+
+                  System.out.print(current);
 
                   s2++;
             }
@@ -154,14 +168,64 @@ public class mediansortedarray {
 
         }
 
+        while(s1<=arr1.length-1){
+
+            if(count==mid1){
+                val1=arr1[s1];
+
+              
+              }
+
+              if(count==mid2){
+                val2=arr1[s1];
+            }
+
+
+
+              current=arr1[s1];
+
+              System.out.print(current);
+
+              s1++;
+
+              count++;
+
+        }
+
+        while(s2<=arr2.length-1){
+            if(count==mid1){
+                val1=arr2[s2];
+
+                
+              }
+
+              if(count==mid2){
+                val2=arr2[s2];
+            }
+
+              current=arr2[s2];
+
+              System.out.print(current);
+
+              s2++;
+
+              count++;
+        }
+
+        System.out.println();
+
+        System.out.println(val1+" "+val2);
+
         
         if((arr2.length+arr1.length)%2==0){
             float ans= (val1+val2)/2.0f;
             System.out.println(ans);
         }
         else{
+
+            System.out.println("hi");
             
-            System.out.println(val2);
+            System.out.println(val1);
         }
 
     }

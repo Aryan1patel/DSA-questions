@@ -1,4 +1,5 @@
 
+
 //package question.binary;
 
 public class kthmissingno {
