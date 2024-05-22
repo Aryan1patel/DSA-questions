@@ -85,7 +85,7 @@ public class mediansortedarray {
     public static void main(String[] args) {
         
         int [] arr1={1,3};
-        int [] arr2={2};
+        int [] arr2={2,4};
 
 
         int s1=0;
@@ -99,7 +99,7 @@ public class mediansortedarray {
         int val1=0;
         int val2=0;
 
-        int current=0;
+        // int current=0;
 
         
 
@@ -126,9 +126,9 @@ public class mediansortedarray {
 
                 
 
-                current=arr1[s1];
+                // current=arr1[s1];
 
-                System.out.print(current);
+                // System.out.print(current);
 
                 s1++;
                 
@@ -149,9 +149,9 @@ public class mediansortedarray {
                     val2=arr2[s2];
                 }
 
-                  current=arr2[s2];
+                //   current=arr2[s2];
 
-                  System.out.print(current);
+                //   System.out.print(current);
 
                   s2++;
             }
@@ -182,9 +182,9 @@ public class mediansortedarray {
 
 
 
-              current=arr1[s1];
+            //   current=arr1[s1];
 
-              System.out.print(current);
+            //   System.out.print(current);
 
               s1++;
 
@@ -203,18 +203,18 @@ public class mediansortedarray {
                 val2=arr2[s2];
             }
 
-              current=arr2[s2];
+            //   current=arr2[s2];
 
-              System.out.print(current);
+            //   System.out.print(current);
 
               s2++;
 
               count++;
         }
 
-        System.out.println();
+        // System.out.println();
 
-        System.out.println(val1+" "+val2);
+        // System.out.println(val1+" "+val2);
 
         
         if((arr2.length+arr1.length)%2==0){
@@ -223,7 +223,7 @@ public class mediansortedarray {
         }
         else{
 
-            System.out.println("hi");
+            // System.out.println("hi");
             
             System.out.println(val1);
         }
