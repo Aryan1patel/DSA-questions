@@ -10,26 +10,26 @@ public class Bubblesort {
         
         while(0<=e){
 
-             boolean swap= false;           // that why best time complecity of bubble is O(n)
-        
-          for(int i=0;i<=e;i++){
+            boolean swap= false;           // that why best time complecity of bubble is O(n)
             
-            
-            if(arr[i]>arr[i+1]){
-                temp=arr[i];
-                arr[i]=arr[i+1];
-                arr[i+1]=temp;
-
-                swap=true;
-            }
-            
-          }
-
+            for(int i=0;i<=e;i++){
+                
+                
+                if(arr[i]>arr[i+1]){
+                    temp=arr[i];
+                    arr[i]=arr[i+1];
+                    arr[i+1]=temp;
+    
+                    swap=true;
+                }
+                
+              }
+    
             if(swap==false){
-            break;
-            }
+                break;
+                }
         
-         e--;
+          e--;
         
         }
 
