@@ -12,7 +12,7 @@ public class Bubblesort {
         
         while(0<=e){
 
-            boolean swap= false;                // that why best time complecity of bubble is O(n)
+            boolean swap= false;      // that why best time complecity of bubble is O(n)
         
         for(int i=0;i<=e;i++){
             
