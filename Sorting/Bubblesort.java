@@ -5,16 +5,15 @@ public class Bubblesort {
 
 
         int [] arr={4, 1, 3, 9, 7};
-        
-        
         int e=arr.length-2;
         int temp;
         
         while(0<=e){
 
-            boolean swap= false;      // that why best time complecity of bubble is O(n)
+             boolean swap= false;           // that why best time complecity of bubble is O(n)
         
-        for(int i=0;i<=e;i++){
+          for(int i=0;i<=e;i++){
+            
             
             if(arr[i]>arr[i+1]){
                 temp=arr[i];
@@ -24,13 +23,13 @@ public class Bubblesort {
                 swap=true;
             }
             
-        }
+          }
 
-        if(swap==false){
+            if(swap==false){
             break;
-        }
+            }
         
-        e--;
+         e--;
         
         }
 
