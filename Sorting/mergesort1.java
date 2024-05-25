@@ -16,7 +16,7 @@ public class mergesort1 {
 
         
 
-        while(i<=mid&&j<=right){
+        while(i<=mid&&j<=right){  // mid and right are the index value so we have to use =
 
             if(arr[i]<=arr[j]){
                 temp.add(arr[i]);
@@ -41,7 +41,7 @@ public class mergesort1 {
 
         for(int a=left;a<=right;a++){
 
-            arr[a]=temp.get(a-left);
+            arr[a]=temp.get(a-left);   // getting value from the temp arraylist from its indexing 0 1 2 3
 
 
         }
@@ -56,11 +56,11 @@ public class mergesort1 {
 
         
 
-        divide(arr, left, mid);
+        divide(arr, left, mid);  // get left part
 
-        divide(arr, mid+1, right);
+        divide(arr, mid+1, right);  // get right part
 
-        merge(arr, left, mid, right);
+        merge(arr, left, mid, right);  // now merge those sorted array
 
     }
     
