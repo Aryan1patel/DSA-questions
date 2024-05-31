@@ -21,7 +21,7 @@ public class subsetinarray {
 
         makesubset(arr, output, ans, i+1);
 
-        output.remove(output.size()-1);  // backtracking removing last element
+        output.remove(output.size()-1);  // backtracking removing last element mean frist take 100 inclusive 000 exclusive than take 020 inclusive and 000 exclusive
 
 
 
