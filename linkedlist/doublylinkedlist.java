@@ -22,6 +22,33 @@ public class doublylinkedlist {
         }
     }
 
+        void addNode(Node head_ref, int pos, int data)
+	{
+		Node newnode= new Node(data);
+		
+		Node current= head_ref;
+		
+		
+		int count=1;
+		
+		
+		
+		while(count != pos){
+		    current=current.next;
+		    count++;
+		    
+		}
+		
+		newnode.next=current.next;    // putting the newnode next and prev
+		newnode.prev=current;
+		
+		if(current.next!=null){
+		    current.next.prev=newnode;  // putting the front no prev to the newnode
+		    
+		}
+		current.next= newnode;        // now putting the back next which is current next
+	}
+
     
 
     //     Node convertfromarray(int [] arr){  // do not use static (because it is a inner class) and because we referenceing to Node 
@@ -105,7 +132,11 @@ public class doublylinkedlist {
 
         print(newhead);
 
-        System.out.println(newhead.next.next.prev.data);
+       // System.out.println(newhead.next.next.prev.data);
+
+       newlist.addNode(newhead, 1, 7);
+
+       print(newhead);
 
         
         
