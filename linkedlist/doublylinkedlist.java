@@ -114,12 +114,12 @@ public class doublylinkedlist {
 
         while(current!=null){
 
-            Node temp= current.next;  // save as temp
+            Node temp= current.next;  // save as temp  // we are reversing the linked list mean we replase link direction of linked list
 
             current.next=prev;
             current.prev=temp;
 
-            prev=current;
+            prev=current;  // now moving the prev and current forword
             current=temp;
 
 
