@@ -107,6 +107,29 @@ public class doublylinkedlist {
         return head;
     }
 
+    public static Node reverseit(Node head){
+
+        Node current= head;
+        Node prev=null;
+
+        while(current!=null){
+
+            Node temp= current.next;  // save as temp
+
+            current.next=prev;
+            current.prev=temp;
+
+            prev=current;
+            current=temp;
+
+
+        }
+
+        head=prev;
+
+        return head;
+    }
+
 
         public static void print(Node head){
 
@@ -114,6 +137,7 @@ public class doublylinkedlist {
 
         while(current!=null){
             System.out.print(current.data+" ");
+
 
             current=current.next;
 
@@ -130,13 +154,15 @@ public class doublylinkedlist {
 
         Node newhead=newlist.convertfromarray(arr);
 
-        print(newhead);
+      //  print(newhead);
 
        // System.out.println(newhead.next.next.prev.data);
 
-       newlist.addNode(newhead, 1, 7);
+      // newlist.addNode(newhead, 1, 7);
 
-       print(newhead);
+       Node newhead2= reverseit(newhead);
+
+       print(newhead2);
 
         
         
